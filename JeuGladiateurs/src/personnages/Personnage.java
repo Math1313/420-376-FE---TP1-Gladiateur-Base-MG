@@ -101,11 +101,11 @@ public class Personnage {
         
         System.out.println();
         System.out.println(nom);
-        System.out.println("Attaque : " + valeurMaxAttaque);
-        System.out.println("Défense : " + valeurDefense);
-        System.out.println("Points de vie : " + pointsDeVie);
-        System.out.println("Initiative : " + initiative);
-        System.out.println("Statut : " + statut);
+        System.out.println("    Attaque : " + valeurMaxAttaque);
+        System.out.println("    Défense : " + valeurDefense);
+        System.out.println("    Points de vie : " + pointsDeVie);
+        System.out.println("    Initiative : " + initiative);
+        System.out.println("    Statut : " + statut);
     }
 
     private int attaqueCalcul() {
