@@ -7,6 +7,11 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
     // TODO : Mettre vos attributs ici
+   String nom;
+   int pointsDeVie;
+   int valeurMaxAttaque;
+   int valeurDefense;
+   int initiative;
     // </editor-fold>
 
     // **************************************************************************
@@ -15,10 +20,20 @@ public class Personnage {
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
     public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
         // TODO : Constructeur AVEC paramètres
+        this.nom = nom;
+        this.valeurMaxAttaque = attaqueMax;
+        this.valeurDefense = defense;
+        this.pointsDeVie = pvs;
+        this.initiative = ini;
     }
 
     public Personnage() {
         // TODO : Constructeur SANS paramètres qui initialise à ZÉRO ou à ""
+        this.nom = "";
+        this.valeurMaxAttaque = 0;
+        this.valeurDefense = 0;
+        this.pointsDeVie = 0;
+        this.initiative = 0;
     }
     // </editor-fold>
 
