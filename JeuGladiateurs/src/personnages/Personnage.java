@@ -6,7 +6,6 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Attributs">
-    // TODO : Mettre vos attributs ici
    private String nom;
    private int pointsDeVie;
    private int valeurMaxAttaque;
@@ -41,7 +40,6 @@ public class Personnage {
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Getters et setters">
-    // TODO : Les getters
     public int getInitiative() {    
         return initiative;
     }
@@ -62,7 +60,6 @@ public class Personnage {
         return valeurDefense;
     }
     
-    // TODO : Les setters
     public void setNom(String nom) {    
         this.nom = nom;
     }
@@ -90,8 +87,8 @@ public class Personnage {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
-        // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
-               String statut;
+        
+        String statut;
         if (pointsDeVie <= 0){
             statut = "Mort";
         }
