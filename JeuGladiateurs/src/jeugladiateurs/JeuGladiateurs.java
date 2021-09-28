@@ -26,7 +26,7 @@ public class JeuGladiateurs {
     personnage2.afficherInfosPersonnage();
     
     affichage.afficherDebutCombat();
-
+    
     // TODO : Afficher le message du début du combat
     // </editor-fold>
 
