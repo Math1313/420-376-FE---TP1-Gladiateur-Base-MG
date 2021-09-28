@@ -1,4 +1,5 @@
 package personnages;
+import java.util.Random;
 
 public class Personnage {
 
@@ -105,10 +106,13 @@ public class Personnage {
         System.out.println("    Statut : " + statut);
     }
 
-    private int attaqueCalcul() {
-        // TODO : Retourner la valeur de l'attaque du personnage.
-        // Cette valeur est trouvée aléatoirement et doit se situer entre ZÉRO et valeurMaxAttaque.
-        return 0;
+    public int attaqueCalcul() {
+        Random rand = new Random();
+        int minValue = 0;
+        int maxValue = valeurMaxAttaque + 1;
+        int attaqueReel = rand.nextInt(maxValue - minValue) + minValue;
+        
+        return attaqueReel;
     }
 
     public void frapperPersonnage(Personnage personnageCible) {
