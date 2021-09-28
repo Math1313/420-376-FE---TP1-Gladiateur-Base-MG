@@ -106,7 +106,7 @@ public class Personnage {
         System.out.println("    Statut : " + statut);
     }
 
-    public int attaqueCalcul() {
+    private int attaqueCalcul() {
         Random rand = new Random();
         int minValue = 0;
         int maxValue = valeurMaxAttaque + 1;
