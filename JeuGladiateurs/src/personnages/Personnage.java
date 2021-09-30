@@ -124,14 +124,14 @@ public class Personnage {
             dommages = 0;
         }
         
-        personnageCible.setPointsDeVie(pointsDeVie - dommages);
+        personnageCible.setPointsDeVie(personnageCible.pointsDeVie - dommages);
         if(personnageCible.getPointsDeVie() < 0)
         {
             personnageCible.setPointsDeVie(0);
         }
         
-        System.out.println(nom + "attaque avec une puissance de : " + forceDeFrappe);
-        System.out.println(personnageCible.getNom() + "a une défense de : " + valeurDefense);
+        System.out.println(nom + " attaque avec une puissance de : " + forceDeFrappe);
+        System.out.println(personnageCible.getNom() + " a une défense de : " + valeurDefense);
         System.out.println("Les dommages sont donc de : " + dommages);
     }
 
