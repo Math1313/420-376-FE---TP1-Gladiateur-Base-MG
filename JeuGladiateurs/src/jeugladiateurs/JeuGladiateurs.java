@@ -35,35 +35,37 @@ public class JeuGladiateurs {
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Mécanique de combat">
     
-    while(personnage1.getPointsDeVie() > 0 && personnage2.getPointsDeVie() > 0)
-        {
-        tour.afficheTour();
-
-        for (int i = 0; i < 101; i++) 
-        {
-            if(personnage1.getInitiative()== i)
+        while(personnage1.getPointsDeVie() > 0 && personnage2.getPointsDeVie() > 0)
             {
+            tour.afficheTour();
 
-                personnage1.frapperPersonnage(personnage2);
-            }
-            else if(personnage2.getInitiative() == i)
+            for (int i = 0; i < 101; i++) 
             {
-                personnage2.frapperPersonnage(personnage1);
+                if(personnage1.getInitiative()== i)
+                {
+
+                    personnage1.frapperPersonnage(personnage2);
+                }
+                else if(personnage2.getInitiative() == i)
+                {
+                    personnage2.frapperPersonnage(personnage1);
+                }
             }
+
+            affichage.afficherSeparateurInfosPerso();
+
+            personnage1.afficherInfosPersonnage();
+            personnage2.afficherInfosPersonnage();
+
+            personnage1.setNewInitiativeRandom();
+            personnage2.setNewInitiativeRandom();
+
+            tour.augmenteTour();
+
+            affichage.afficherSeparateurDeTour();
         }
-
-        affichage.afficherSeparateurInfosPerso();
-
-        personnage1.afficherInfosPersonnage();
-        personnage2.afficherInfosPersonnage();
-
-        personnage1.setNewInitiativeRandom();
-        personnage2.setNewInitiativeRandom();
-
-        tour.augmenteTour();
-
-        affichage.afficherSeparateurDeTour();
-        }
+        
+        affichage.afficheVictoire(personnage1, personnage2);
     }
         // TODO : Après la boucle, afficher le résultat du combat
         // </editor-fold>
