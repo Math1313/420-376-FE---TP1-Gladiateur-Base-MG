@@ -63,9 +63,10 @@ public class JeuGladiateurs {
         tour.augmenteTour();
 
         affichage.afficherSeparateurDeTour();
-        // TODO : Après la boucle, afficher le résultat du combat
-        // </editor-fold>
         }
     }
+        // TODO : Après la boucle, afficher le résultat du combat
+        // </editor-fold>
+
 
 }
