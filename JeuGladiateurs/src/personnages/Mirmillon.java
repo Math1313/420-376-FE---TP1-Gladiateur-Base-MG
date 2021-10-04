@@ -26,8 +26,23 @@ public class Mirmillon extends Personnage{
         System.out.println("    Classe : " + classe);
     }
     
-     public void setNewInitiativeRandom()
+    public void setNewInitiativeRandom()
+    {
+        super.setNewInitiativeRandom(maxIni);
+    }
+    
+    @Override
+     public void frapperPersonnage(Personnage personnageCible)
      {
-         super.setNewInitiativeRandom(maxIni);
+         super.frapperPersonnage(personnageCible);
+         if(personnageCible.getPointsDeVie() == 0)
+         {
+             System.out.println(personnageCible.getNom() + " se fait violemment décapiter");
+         }
+         else
+         {
+             System.out.println(super.getNom() + " attaque de nouveau.");
+             super.frapperPersonnage(personnageCible);
+         }
      }
 }
