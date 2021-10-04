@@ -1,6 +1,8 @@
 package personnages;
 import java.util.Random;
 
+
+
 public class Personnage {
 
     // **************************************************************************
@@ -135,11 +137,10 @@ public class Personnage {
         System.out.println("Les dommages sont donc de : " + dommages);
     }
 
-    public void setNewInitiativeRandom() {
+    public void setNewInitiativeRandom(int maxIni) {
         Random rand = new Random();
-        int maxValue = 100;
         int minValue = 0;
-        int initiative = rand.nextInt(maxValue - minValue) + minValue;
+        int initiative = rand.nextInt(maxIni - minValue) + minValue;
         setInitiative(initiative);
     }
     // </editor-fold>
