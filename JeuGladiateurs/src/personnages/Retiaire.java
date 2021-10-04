@@ -26,8 +26,13 @@ public class Retiaire extends Personnage{
         System.out.println("    Classe : " + classe);
     }
     
-     public void setNewInitiativeRandom()
-     {
-         super.setNewInitiativeRandom(maxIni);
-     }
+    public void setNewInitiativeRandom()
+    {
+        super.setNewInitiativeRandom(maxIni);
+    }
+    
+    @Override
+    public void frapperPersonnage(Personnage personnageCible)
+    {
+    }
 }
