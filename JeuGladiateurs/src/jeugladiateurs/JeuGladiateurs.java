@@ -48,7 +48,7 @@ public class JeuGladiateurs {
 
                     personnage1.frapperPersonnage(personnage2);
                 }
-                else if(personnage2.getInitiative() == i)
+                else if(personnage2.getInitiative() == i && personnage2.getPointsDeVie() != 0)
                 {
                     personnage2.frapperPersonnage(personnage1);
                 }
